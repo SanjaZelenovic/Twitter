@@ -3,14 +3,37 @@ package com.twitter;
 import java.util.LinkedList;
 import com.twitter.poruke.TwitterPoruka;
 	
+/**
+ *Naziv klase: Twitter
+ * Sadrzi metodu za vracanje svih poruka, metodu za unos nove poruke i metodu za vracanje poruka sa naznacenim tagom.
+ * 
+ * @author Sanja
+ *
+ */
 public class Twitter {
 		
+	/**
+	 * Atribut koji predstavlja listu svih poruka.
+	 * 
+	 * Lista je odmah inicijalizovana.
+	 */
 	private LinkedList<TwitterPoruka> poruke = new LinkedList<TwitterPoruka>();
 		
+	/**
+	 * Metoda: vraca sve poruke iz liste poruke.
+	 * 
+	 * @return sve poruke iz liste poruke.
+	 */
 	public LinkedList<TwitterPoruka> vratiSvePoruke(){
 		return poruke;
 	}
 	
+	/**
+	 * Metoda postavlja vrednost atributa korisnik i poruka na prosledjene parametre i u listu unosi novu poruku za tog korisnika.
+	 * 
+	 * @param korisnik twitter naloga
+	 * @param poruka koju korisnik namerava da twittuje
+	 */
 	public void unesi(String korisnik, String poruka) {
 		
 		//Pravi se nova poruka i puni podacima.
@@ -23,6 +46,14 @@ public class Twitter {
 		poruke.addLast(tp);
 		}
 	
+	/**
+	 * Metoda vraca sve poruke koje sadrze zadati tag, koji je unet kao parametar, pri cemu je broj poruka koje ce biti 
+	 * vracene jednak zadatom broju, koji je takodje prosledjen u vidu parametra maxBroj.
+	 *
+	 * @param maxBroj predstavlja maksimalan broj poruka sa tim tagom koje je moguce prikazati
+	 * @param tag predstavlja vrednost na osnovu koje vrsimo pretragu twittova, odnosno trazimo sve poruke koje u sebi sadrze taj tag.
+	 * @return niz svih poruka sa tim tagom, pri cemu je kapacitet tog niza jednak maxBroj
+	 */
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {
         
 		if (tag==null || tag.isEmpty())
