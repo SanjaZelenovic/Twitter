@@ -147,10 +147,5 @@ public class TwitterTest {
 		twitter.vratiPoruke(26, "");
 	}
 	
-	@Test 
-	public void testVratiPorukeNegativan() {
-		
-		twitter.vratiPoruke(-26, "neki");
-	}
 	
 }

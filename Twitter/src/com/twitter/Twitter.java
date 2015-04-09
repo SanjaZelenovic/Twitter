@@ -54,7 +54,7 @@ public class Twitter {
 	 * @param tag predstavlja vrednost na osnovu koje vrsimo pretragu twittova, odnosno trazimo sve poruke koje u sebi sadrze taj tag.
 	 * @return niz svih poruka sa tim tagom, pri cemu je kapacitet tog niza jednak maxBroj
 	 */
-	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {
+	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) throws RuntimeException {
         
 		if (tag==null || tag.isEmpty())
 			throw new RuntimeException("Morate uneti tag");

@@ -38,7 +38,7 @@ public class TwitterPoruka {
 	 * 
 	 * @param korisnik
 	 */
-	public void setKorisnik(String korisnik) {
+	public void setKorisnik(String korisnik) throws RuntimeException {
 		if (korisnik==null || korisnik.equals(""))
 			throw new RuntimeException("Ime korisnika mora biti uneto");
 		this.korisnik = korisnik;
@@ -64,7 +64,7 @@ public class TwitterPoruka {
 	 * 
 	 * @param poruka
 	 */
-	public void setPoruka(String poruka) {
+	public void setPoruka(String poruka)  throws RuntimeException {
 		if (poruka==null || poruka.length()>140)
 			throw new RuntimeException("Poruka mora biti uneta i mora imati najvise 140 znakova");
 		this.poruka = poruka;
