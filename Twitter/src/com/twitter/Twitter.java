@@ -53,6 +53,7 @@ public class Twitter {
 	 * @param maxBroj predstavlja maksimalan broj poruka sa tim tagom koje je moguce prikazati
 	 * @param tag predstavlja vrednost na osnovu koje vrsimo pretragu twittova, odnosno trazimo sve poruke koje u sebi sadrze taj tag.
 	 * @return niz svih poruka sa tim tagom, pri cemu je kapacitet tog niza jednak maxBroj
+	 * @throws baca RunTimeException u slucaju da je uneti String tag prazan ili null
 	 */
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) throws RuntimeException {
         

@@ -37,6 +37,7 @@ public class TwitterPoruka {
 	 * 		</ul>
 	 * 
 	 * @param korisnik
+	 * @throws baca RunTimeException u slucaju da je uneti String parametar korisnik null ili prazan string
 	 */
 	public void setKorisnik(String korisnik) throws RuntimeException {
 		if (korisnik==null || korisnik.equals(""))
@@ -63,6 +64,7 @@ public class TwitterPoruka {
 	 * 		</ul>
 	 * 
 	 * @param poruka
+	 * @throws baca RunTimeException u slucaju da je uneti String parametar poruka prazan ili null
 	 */
 	public void setPoruka(String poruka)  throws RuntimeException {
 		if (poruka==null || poruka.length()>140)
